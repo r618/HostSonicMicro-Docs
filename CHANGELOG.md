@@ -1,5 +1,6 @@
 
 ## TestFlight Alpha 1.0.2
+- fix volume sliders travels
 - refuse to load incompatible plugins instead of crashing
 
 ## TestFlight Alpha 1.0.1
