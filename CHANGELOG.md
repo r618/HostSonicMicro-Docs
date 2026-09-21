@@ -1,9 +1,10 @@
 
 ## TestFlight Alpha 1.0.2
 - fixed volume sliders travels
-- refuse to load incompatible plugins instead of crashing
-- added option to change samplerate for the session to cogwheel menu, which should help with loading previously incompatible plugins
 - several UI/UX improvements/updates: mixers scrolling/sliders, MIDI Input config, MIDI Input/Sends configs removed from scrolling,...
+- refuse to load incompatible plugins instead of crashing - a warning suggesting samplerate change for relevant error when loading is shown
+- added option to change samplerate for the session to cogwheel menu which should help with loading previously incompatible plugins
+- improved session's plugins restoration/loading
 
 ## TestFlight Alpha 1.0.1
 Sep 2026
