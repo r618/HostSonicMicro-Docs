@@ -1,5 +1,6 @@
 ## TestFlight Beta 1.0.3
 - better compatibility with how plugins display their content in host's window
+- Audio Input can be used in Instrument slot
 
 ## TestFlight Alpha 1.0.2
 - fixed volume sliders travels

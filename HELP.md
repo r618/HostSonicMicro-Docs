@@ -1,7 +1,8 @@
 
 ## Quick overview
 
-- There are four lanes/tracks, each can have up to two MIDI processors/generators, one instrument, and up to three effects
+- There are four lanes/tracks, each can have up to two MIDI processors/generators, one mutually exclusive Instrument or Audio Input source, and up to three effects
+- Audio Input uses the system default audio input. It is processed by that track's Audio FX and is included in final recording and History Machine audio.
 - Three main sections below: **Rack** where lanes are hosted, **Mixer**, and **Pads** for testing the sound on track #1 (either with or bypassing currently loaded MIDi processor)
 - Sends A/B and Master inserts are below mixer on **Mixer** pane - UI is the same, but they are currently selected track specific -
 - all slots can host compatible AUv3, AUv2 plugins according to their type (MIDI processor, instrument, effect)
