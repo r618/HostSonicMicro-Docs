@@ -1,3 +1,5 @@
+## TestFlight Beta 1.0.3
+- better compatibility with how plugins display their content in host's window
 
 ## TestFlight Alpha 1.0.2
 - fixed volume sliders travels
