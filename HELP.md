@@ -15,7 +15,7 @@
 
 - 44100 Hz is default samplerate used for Init/new sessions - this should help with compatibility of wider range of plugins / MIDI processors
 - for compatible plugins session's samplerate can be changed in Settings
-Internal processsing and recorded audio is in stereo.
+Internal processsing uses 256 frames for audio I/O buffer and (recorded) audio is in stereo.
 
 ## Recording
 

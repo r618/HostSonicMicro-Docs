@@ -1,6 +1,7 @@
 ## TestFlight Beta 1.0.3
-- better compatibility with how plugins display their content in host's window
+- better compatibility with how plugins display their content in host's windows
 - Audio Input can be used in Instrument slot
+- improvements for plugins/FXs connections (disconnected FXs restore reliably)
 
 ## TestFlight Alpha 1.0.2
 - fixed volume sliders travels
