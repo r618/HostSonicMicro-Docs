@@ -1,7 +1,7 @@
 ## TestFlight Beta 1.0.3
 - Audio Input can be used in Instrument slot
-- there are small icons on each track's button idicating what plugin(s) are populated on it
-- plugin's windows are more compact and should be more accomodating/compatible with how plugins display their content in hosts
+- there are small icons on each track's button indicating what plugin(s) are populated on it
+- plugin's windows are more compact and should be more accommodating/compatible with how plugins display their content in host
 - improvements for plugins/FXs connections (disconnected FXs now restore reliably)
 
 ## TestFlight Alpha 1.0.2
