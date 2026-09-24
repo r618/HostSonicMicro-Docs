@@ -1,3 +1,6 @@
+## TestFlight Beta 1.0.4
+- more compatibility fixes for cold plug-in restoration and CoreMIDI startup
+
 ## TestFlight Beta 1.0.3
 - Audio Input can be used in Instrument slot
 - there are small icons on each track's button indicating what plugin(s) are populated on it
