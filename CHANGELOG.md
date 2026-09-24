@@ -1,5 +1,6 @@
 ## TestFlight Beta 1.0.4
 - more compatibility fixes for cold plug-in restoration and CoreMIDI startup
+- simple CPU meter added for last (output) buffer rendering
 
 ## TestFlight Beta 1.0.3
 - Audio Input can be used in Instrument slot
