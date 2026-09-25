@@ -1,6 +1,6 @@
 ## TestFlight Beta 1.0.4
 - compatibility fixes for cold plug-in restoration and CoreMIDI startup
-- more isolation fixes for failing plugins which could affect entire session
+- isolation fixes for failing plugins which could affect entire session
 - added a "Reload" action to plugin's menu which tries to populate the same plugin without having to browse for it again
 
 ## TestFlight Beta 1.0.3
