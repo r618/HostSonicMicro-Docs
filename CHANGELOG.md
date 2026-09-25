@@ -2,6 +2,7 @@
 - compatibility fixes for cold plug-in restoration and CoreMIDI startup
 - isolation fixes for failing plugins which could affect entire session
 - added a "Reload" action to plugin's menu which tries to populate the same plugin without having to browse for it again
+- UI/UX updates
 
 ## TestFlight Beta 1.0.3
 - Audio Input can be used in Instrument slot
