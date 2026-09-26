@@ -1,6 +1,6 @@
 ## TestFlight Beta 1.0.4
-- compatibility fixes for cold plug-in restoration and CoreMIDI startup
-- isolation fixes for failing plugins which could affect entire session
+- more plugins loading/restoration and MIDI startup fixes
+- currently selected patch id/name in plugin's patches menu (if it is provided) is also saved in session now (actual settings/content was saved also before already)
 - added a "Reload" action to plugin's menu which tries to populate the same plugin without having to browse for it again
 - UI/UX updates
 
