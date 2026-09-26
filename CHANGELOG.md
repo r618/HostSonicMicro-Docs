@@ -1,3 +1,6 @@
+## TestFlight Beta 1.0.5
+- fix samplerate mismatch
+
 ## TestFlight Beta 1.0.4
 - more plugins loading/restoration and MIDI startup fixes
 - currently selected patch id/name in plugin's patches menu (if it is provided) is also saved in session now (actual settings/content was saved also before already)
