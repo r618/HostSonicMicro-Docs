@@ -1,5 +1,6 @@
 ## TestFlight Beta 1.0.5
-- fix samplerate mismatch
+- fixed samplerate mismatch
+- less audio disruptions when app is changing background/foreground states
 
 ## TestFlight Beta 1.0.4
 - more plugins loading/restoration and MIDI startup fixes
