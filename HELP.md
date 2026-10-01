@@ -26,6 +26,18 @@
 - for compatible plugins session's samplerate can be changed in Settings
 Internal processsing uses 256 frames for audio I/O buffer and (recorded) audio is in stereo.
 
+## MIDI In
+
+- **MIDI input** can be picked from any currenly available sources on the device - or as from all of them
+- possible sources include Netowork RTP session(s) and configured IAC on macOS
+- it's possible to pick a single track as MIDI In destination currently
+
+## MIDI Sync In/Out
+
+- **Input clock** can be synced to clock selected in BPM/Tempo dialog:
+- choose from all discovered sync points; when *Auto* is selected, first Start 'wins' and will be kept/prioritized over any other sync which might arrive later
+- **Output clock** can be advertised as public, with any subsriber(s) or to a specific existing app/destination
+
 ## Recording
 
 - Final output can be recorded immediately by tapping **Record** button at the bottom right, tap/press again to finish and save

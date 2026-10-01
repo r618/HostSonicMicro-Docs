@@ -1,7 +1,7 @@
 ## TestFlight Beta 1.0.6
-- MIDI Sync In/Out CoreMIDI, Network RTP, + IAC on macOS
+- added MIDI Sync In/Out via CoreMIDI on device, + Network RTP, + IAC on macOS
 - tempo sync attempts for drift corrections
-- added MIDI In (for single track)
+- added MIDI In (for single chosen track)
 
 ## TestFlight Beta 1.0.5
 - fixed samplerate mismatch
