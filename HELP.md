@@ -21,10 +21,9 @@
 
 ## Audio settings
 
-- 44100 Hz is default samplerate used for Init/new sessions - this should help with compatibility of wider range of plugins / MIDI processors
+- app runs at current default output rate, change in cogwheel menu, **Settings**
 
-- for compatible plugins session's samplerate can be changed in Settings
-Internal processsing uses 256 frames for audio I/O buffer and (recorded) audio is in stereo.
+Internal processsing requests 256 frames for audio I/O buffer and (recorded) audio is in stereo.
 
 ## MIDI In
 

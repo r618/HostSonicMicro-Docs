@@ -1,3 +1,6 @@
+## next
+- fixed|updated app's explicit samplerate
+
 ## TestFlight Beta 1.0.6
 - added MIDI Sync In/Out via CoreMIDI on device, + Network RTP, + IAC on macOS
 - tempo sync attempts for drift corrections
