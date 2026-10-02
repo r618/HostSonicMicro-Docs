@@ -1,5 +1,7 @@
 ## next
-- fixed|updated app's explicit samplerate
+- Settings, - fixed|updated app's explicit samplerate
+- Settings, - TM length
+- AU removal exception is reported instead of crashing
 
 ## TestFlight Beta 1.0.6
 - added MIDI Sync In/Out via CoreMIDI on device, + Network RTP, + IAC on macOS
