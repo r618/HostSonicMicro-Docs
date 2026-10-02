@@ -41,7 +41,7 @@ Internal processsing requests 256 frames for audio I/O buffer and (recorded) aud
 
 - Final output can be recorded immediately by tapping **Record** button at the bottom right, tap/press again to finish and save
 
-- **History Machine** runs continuosly and stores last 30 seconds of final output. Tapping it keeps the history and appends to it currently playing output, press either **History Machine** or **Record** again to finish and save
+- **History Machine** runs continuosly and stores the last few seconds of the final output. You can set the amount in **Settings**. Tapping it keeps the history and appends to it currently playing output, press either **History Machine** or **Record** again to finish and save
 
 - save location for final WAV file is selected using the standard Files/Finder picker (file name contains the session name and capture date/time by default)
 
