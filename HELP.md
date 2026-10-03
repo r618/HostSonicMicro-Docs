@@ -31,12 +31,18 @@ Internal processsing requests 256 frames for audio I/O buffer and (recorded) aud
 - after discovered sources include Network RTP sessions and configured IAC on macOS
 - pick app's track as MIDI In destination
 
-## MIDI Sync In/Out & Ableton Link sync
+## MIDI Sync In/Out
 
 - **Input clock** can be synced to clock selected in BPM/Tempo dialog:
-- Ableton Link sync and MIDI In/Out shoudl be mutually exclusive
+- MIDI In/Out and Ableton Link sync are mutually exclusive
 - choose from all discovered sync points; when *Auto* is selected, first Start 'wins' and will be kept/prioritized over any other sync which might arrive later
 - **Output clock** can be advertised as public, with any subsriber(s) or to a specific existing app/destination
+
+## Ableton Link Sync and Audio
+
+- enable Link in BPM/Tempo dialog, or when adding/opening Audio Input instrument on a track
+- tempo is synced after Link is enabled
+- select from Link audio streams on Audio Input dialog once they're discovered/available
 
 ## Recording
 

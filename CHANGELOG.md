@@ -1,6 +1,6 @@
 ## TestFlight Beta 1.0.7
 - + Settings window with fixed/updated app's default samplerate and History Machine length
-- + Ableton Link sync
+- + Ableton Link sync, and Audio
 - more bugfixes for AUs operations
 
 ## TestFlight Beta 1.0.6
