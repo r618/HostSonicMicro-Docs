@@ -27,13 +27,14 @@ Internal processsing requests 256 frames for audio I/O buffer and (recorded) aud
 
 ## MIDI In
 
-- **MIDI input** can be picked from any currenly available sources on the device - or as from all of them
-- possible sources include Netowork RTP session(s) and configured IAC on macOS
-- it's possible to pick a single track as MIDI In destination currently
+- **MIDI input** - pick from any available CoreMIDI sources on the device or as aggregate of all of them
+- after discovered sources include Network RTP sessions and configured IAC on macOS
+- pick app's track as MIDI In destination
 
-## MIDI Sync In/Out
+## MIDI Sync In/Out & Ableton Link sync
 
 - **Input clock** can be synced to clock selected in BPM/Tempo dialog:
+- Ableton Link sync and MIDI In/Out shoudl be mutually exclusive
 - choose from all discovered sync points; when *Auto* is selected, first Start 'wins' and will be kept/prioritized over any other sync which might arrive later
 - **Output clock** can be advertised as public, with any subsriber(s) or to a specific existing app/destination
 
@@ -41,9 +42,9 @@ Internal processsing requests 256 frames for audio I/O buffer and (recorded) aud
 
 - Final output can be recorded immediately by tapping **Record** button at the bottom right, tap/press again to finish and save
 
-- **History Machine** runs continuosly and stores the last few seconds of the final output. You can set the amount in **Settings**. Tapping it keeps the history and appends to it currently playing output, press either **History Machine** or **Record** again to finish and save
+- **History Machine** runs continuosly and stores the last few seconds of the final output. You can set the amount in **Settings**. Tapping it keeps the history and appends currently playing output, press either **History Machine** or **Record** again to finish and save
 
-- save location for final WAV file is selected using the standard Files/Finder picker (file name contains the session name and capture date/time by default)
+- save location for final WAV file is selected using the standard Files/Finder picker, file name contains the session name and capture date/time by default
 
 - device suspension or a stopped audio engine cannot supply audio, changing the sample rate (like switching outputs..) also clears the history
 

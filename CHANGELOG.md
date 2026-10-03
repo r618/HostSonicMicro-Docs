@@ -1,12 +1,12 @@
-## next
-- Settings, - fixed|updated app's explicit samplerate
-- Settings, - TM length
-- AU removal exception is reported instead of crashing
+## TestFlight Beta 1.0.7
+- + Settings window with fixed/updated app's default samplerate and History Machine length
+- + Ableton Link sync
+- more bugfixes for AUs operations
 
 ## TestFlight Beta 1.0.6
-- added MIDI Sync In/Out via CoreMIDI on device, + Network RTP, + IAC on macOS
+- + MIDI Sync In/Out via CoreMIDI on device, + Network RTP, + IAC on macOS
 - tempo sync attempts for drift corrections
-- added MIDI In (for single chosen track)
+- + MIDI In (target is single selected track)
 
 ## TestFlight Beta 1.0.5
 - fixed samplerate mismatch
