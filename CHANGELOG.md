@@ -1,6 +1,7 @@
 ## TestFlight Beta 1.0.7
 - + Settings window with fixed/updated app's default samplerate and History Machine length
 - + Ableton Link sync, and Audio
+- + Optional MPE pads: per-note pitch, CC74 timbre, and touch pressure
 - more bugfixes for AUs operations
 
 ## TestFlight Beta 1.0.6

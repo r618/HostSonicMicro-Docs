@@ -31,6 +31,18 @@ Internal processsing requests 256 frames for audio I/O buffer and (recorded) aud
 - after discovered sources include Network RTP sessions and configured IAC on macOS
 - pick app's track as MIDI In destination
 
+## MPE pads
+
+Enable **MPE expression** on the Pads page for an MPE instrument. Off by default, saved with the session. Ordinary pads keep their original behavior.
+
+- Each held pad uses a separate member channel in the lower MPE zone: manager channel 1, member channels 2–7. One finger per pad is supported, pads can be played simultaneously.
+- Pitch bend is left to right **Pitch bend width**, beside the MPE toggle, selects 2, 12, 24, or 48 semitones per pad width (default: 12).
+- Slide up / down sends tCC74 (timbre). CC74 starts at 64 at touch-down.
+- Touch force sends channel pressure only for force-capable direct touch or Apple Pencil.
+- Lift sends note-off and frees the channel.
+
+The host sends MPE zone and pitch range configuration. If the instrument needs manual setup, select the lower zone, channels 2–7, and ±48 semitones for member pitch bend. MIDI processors on the pad route must preserve the member channels and expression messages; use **Direct to instrument** to bypass them. External MIDI notes use the same instrument, so avoid channel conflicts while playing pads.
+
 ## MIDI Sync In/Out
 
 - **Input clock** can be synced to clock selected in BPM/Tempo dialog:
