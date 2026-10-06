@@ -1,7 +1,10 @@
 ## TestFlight Beta 1.0.7
 - + Settings window with fixed/updated app's default samplerate and History Machine length
-- + Ableton Link sync, and Audio
-- + Optional MPE pads: per-note pitch, CC74 timbre, and touch pressure
+- + Ableton Link Sync and Audio
+- + Pads have optional MIDI MPE: per-note pitch, CC74 timbre, and touch pressure
+- + enhanced support for Audio FX units which support MIDI:
+- MIDI reception checkbox for compatible Audio FX - track's MIDI is sent to both Instrument and Audio FX
+- MIDI processors and pads can control FX on Audio Input and Link Audio tracks
 - more bugfixes for AUs operations
 
 ## TestFlight Beta 1.0.6

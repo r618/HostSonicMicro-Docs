@@ -27,9 +27,11 @@ Internal processsing requests 256 frames for audio I/O buffer and (recorded) aud
 
 ## MIDI In
 
-- **MIDI input** - pick from any available CoreMIDI sources on the device or as aggregate of all of them
-- after discovered sources include Network RTP sessions and configured IAC on macOS
-- pick app's track as MIDI In destination
+- **MIDI input** selects one CoreMIDI source or **All sources** for the app. Available sources include Network RTP sessions and IAC on macOS.
+- Select one **Destination** track, pads use this same destination. MIDI In is visible as **HostSonic MIDI** in system/other apps.
+- The track's two MIDI processors run in order, final output goes to the Instrument and every MIDI-capable Audio FX (`aumf`) with its **MIDI** checkbox enabled (off by default). All enabled destinations receive the same events in parallel.
+- Audio Input and Link Audio tracks can also use MIDI processors and send MIDI to enabled FX, without an instrument. For example, select Microphone as the audio source, load MIDI capable FX in FX slot, enable it's MIDI checkbox and load MIDI processor.
+- Pads use the same destination and keep their Through MIDI / Direct choice. Direct bypasses the MIDI processors for pads only and sends to the instrument and enabled FX.
 
 ## MPE pads
 
@@ -41,7 +43,7 @@ Enable **MPE expression** on the Pads page for an MPE instrument. Off by default
 - Touch force sends channel pressure only for force-capable direct touch or Apple Pencil.
 - Lift sends note-off and frees the channel.
 
-The host sends MPE zone and pitch range configuration. If the instrument needs manual setup, select the lower zone, channels 2–7, and ±48 semitones for member pitch bend. MIDI processors on the pad route must preserve the member channels and expression messages; use **Direct to instrument** to bypass them. External MIDI notes use the same instrument, so avoid channel conflicts while playing pads.
+The host sends MPE zone and pitch range configuration. If the instrument needs manual setup, select the lower zone, channels 2–7, and ±48 semitones for member pitch bend. MIDI processors on the pad route must preserve the member channels and expression messages; use **Direct** to bypass them. External MIDI notes use the same instrument, so avoid channel conflicts while playing pads.
 
 ## MIDI Sync In/Out
 
