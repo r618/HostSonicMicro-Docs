@@ -54,9 +54,10 @@ The host sends MPE zone and pitch range configuration. If the instrument needs m
 
 ## Ableton Link Sync and Audio
 
-- enable Link in BPM/Tempo dialog, or when adding/opening Audio Input instrument on a track
+- enable Link in BPM/Tempo dialog, when adding/opening Audio Input instrument on a track, or via Main Mixer's Sends -> Link Output
 - tempo is synced after Link is enabled
-- select from Link audio streams on Audio Input dialog once they're discovered/available
+- to receive audio select from Link available audio streams on Audio Input dialog once they're discovered
+- to send host's final mix enable 'Share Main Mix' on Mixer/Sends in **Link Audio Output**
 
 ## Recording
 
