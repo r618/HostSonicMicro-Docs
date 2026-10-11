@@ -1,3 +1,6 @@
+## TestFlight Beta 1.0.8
+- + Audio File track source: waveform (Audio Input) menu -> Audio File, standard Files/Finder picker; any format the OS decodes (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
+
 ## TestFlight Beta 1.0.7
 - + Settings window with fixed/updated app's default samplerate and History Machine length
 - + Ableton Link Sync and Audio

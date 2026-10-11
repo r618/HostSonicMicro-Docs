@@ -1,7 +1,7 @@
 
 ## Overview
 
-- There are four lanes/tracks, each can have up to two MIDI processors/generators, one mutually exclusive Instrument or Audio Input source, and up to three audio effects
+- There are four lanes/tracks, each can have up to two MIDI processors/generators, one mutually exclusive Instrument, Audio Input, Link Audio or Audio File source, and up to three audio effects
 
 - Audio Input uses the system default audio input. It is processed by that track's Audio FX and is included in final recording and History Machine audio.
 
@@ -58,6 +58,19 @@ The host sends MPE zone and pitch range configuration. If the instrument needs m
 - tempo is synced after Link is enabled
 - to receive audio select from Link available audio streams on Audio Input dialog once they're discovered
 - to send host's final mix enable 'Share Main Mix' on Mixer/Sends in **Link Audio Output**
+
+## Audio File
+
+- to add an existing audio file in supported format as audio sounce/Instrument: tap the waveform icon -> **Audio File** -> **Choose Audio File…**; any format the OS can decode is accepted (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
+- the file is copied to app's **Documents/Audio Files** and decoded to memory; limit is 256 MB decoded (~12 min stereo at 44.1 kHz). Files with a different rate are resampled to the session rate, mono plays on both channels, more than two channels use the first two
+- playback follows host transport (internal, MIDI Sync and Link): Play from stop starts at the playhead position, Pause/Resume continues from where it paused
+- tap the loaded file to open its waveform dialog:
+  - drag the waveform to set the playhead; it is also the start position for the next Play from stop
+  - **Start** field takes exact time as `SS`, `MM:SS`, `H:MM:SS`, decimals allowed (`1:23.5`)
+  - file info: name, title/artist/album when present, format/container, sample rate, channels, bit depth (PCM) or estimated bit rate, duration and size
+- playhead/start position and Loop are saved in the session; the session stores the file name only
+- **Files location:** iOS: Files app -> On My iPhone/iPad -> HostSonic μ -> Audio Files; macOS: `~/Library/Containers/<app>/Data/Documents/Audio Files`. Picking the same file again reuses its copy, a file picked from this folder is used in place, a different file with an existing name gets a numbered name. Copies are not removed by the app - delete them in Files/Finder; a session whose file was deleted shows it as missing, other tracks keep playing
+
 
 ## Recording
 
