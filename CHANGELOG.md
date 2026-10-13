@@ -1,5 +1,7 @@
 ## TestFlight Beta 1.0.8
 - + Audio File track source: waveform (Audio Input) menu -> Audio File, standard Files/Finder picker; any format the OS decodes (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
+- UI: better support for small screens & larger OS text sizes (should be identical on normal larger screens)
+- macOS: plugin windows improvements
 
 ## TestFlight Beta 1.0.7
 - + Settings window with fixed/updated app's default samplerate and History Machine length
