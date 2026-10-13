@@ -3,6 +3,7 @@
 - + Audio File track source: waveform (Audio Input) menu -> Audio File, standard Files/Finder picker; any format the OS decodes (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
 - UI: better support for small screens & larger OS text sizes (should be identical on normal common screens)
 - : better layout for tracks switching
+- added MIDI In indication and switch directly to track view
 - macOS: plugin windows improvements
 
 ## TestFlight Beta 1.0.7
