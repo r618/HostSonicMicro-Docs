@@ -17,6 +17,8 @@
 
 - Current session is also saved automatically and at regular intervals and automatically restored on relaunch.
 
+- **Saved sessions are open files**: each is a folder in **Documents/Sessions** (next to Audio Files) with a readable `Session.json` and one standard `.aupreset` file per plug-in state, so your work can stay usable without the app. The folder name is the session name - rename, copy or back up folders in Files/Finder. Format specification: [SESSION_FORMAT.md](https://github.com/r618/HostSonicMicro-Docs/blob/master/SESSION_FORMAT.md)
+
 - an RMS based green diode indicator's intensity at bottom left measures approximately final audio before its output/recorded
 
 ## Audio settings
