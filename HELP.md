@@ -80,7 +80,9 @@ The host sends MPE zone and pitch range configuration. If the instrument needs m
 
 - **History Machine** runs continuosly and stores the last few seconds of the final output. You can set the amount in **Settings**. Tapping it keeps the history and appends currently playing output, press either **History Machine** or **Record** again to finish and save
 
-- save location for final WAV file is selected using the standard Files/Finder picker, file name contains the session name and capture date/time by default
+- save location for the final file is selected using the standard Files/Finder picker, file name contains the session name and capture date/time by default
+
+- file format is set in **Settings** -> **Recording**: AAC (256 kbps .m4a), FLAC (default, lossless 24-bit) or WAV (24-bit). AAC is saved at 44.1 or 48 kHz when the processing rate is higher
 
 - device suspension or a stopped audio engine cannot supply audio, changing the sample rate (like switching outputs..) also clears the history
 

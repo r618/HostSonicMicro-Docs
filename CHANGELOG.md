@@ -1,10 +1,11 @@
 ## TestFlight Beta 1.0.8
-- + open session format: saved sessions are folders in Documents/Sessions (Files app/Finder) with a readable Session.json and standard .aupreset files for plug-in states; see SESSION_FORMAT.md. Sessions saved by earlier betas are not loaded
+- + open text session format: saved sessions are folders in Documents/Sessions (Files app/Finder) with a readable Session.json and standard .aupreset files for plug-in states; see SESSION_FORMAT.md. Sessions saved by earlier betas are not loaded
 - + Audio File track source: waveform (Audio Input) menu -> Audio File, standard Files/Finder picker; any format the OS decodes (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
 - UI: better support for small screens & larger OS text sizes (should be identical on normal common screens)
 - : better layout for tracks switching
 - added MIDI In indication and switch directly to track view
 - macOS: plugin windows improvements
+- + saved recording formats: AAC, FLAC(default) and WAV, set in Settings -> Recording
 
 ## TestFlight Beta 1.0.7
 - + Settings window with fixed/updated app's default samplerate and History Machine length
