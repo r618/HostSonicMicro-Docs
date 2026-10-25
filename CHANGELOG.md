@@ -1,3 +1,6 @@
+## Unreleased
+- + MIDI files in Audio File track source (macOS): Standard MIDI Files play through the system General MIDI bank, rendered once to audio, then waveform/playhead/Loop work as for audio files. iOS needs a shipped bank - not yet
+
 ## 1.0.9
 - hardened final output physical protection & Panic recovery
 ## TestFlight Beta 1.0.8

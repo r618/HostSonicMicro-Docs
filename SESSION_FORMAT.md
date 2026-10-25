@@ -98,7 +98,7 @@ The rack layout is fixed. The app rejects a file with a different number of trac
 | `name` | string | Track name, may be empty. |
 | `source` | string | `instrument`, `audioInput` (system audio input), `linkAudio` or `audioFile`. An audio source replaces the instrument slot, so slot 3 is then empty. |
 | `linkAudio` | object | When `source` is `linkAudio`: Ableton Link Audio channel, as `peer` and `channel` names plus `peerID` and `channelID`. |
-| `audioFile` | object | When `source` is `audioFile`: `file` (file name in the **Audio Files** folder), `startSeconds` (where playback starts from a stopped transport), `loops` (boolean). |
+| `audioFile` | object | When `source` is `audioFile`: `file` (file name in the **Audio Files** folder; an audio file or a Standard MIDI File such as `.mid`), `startSeconds` (where playback starts from a stopped transport), `loops` (boolean). |
 | `level` | number | Fader position, 0–1. Gain in dB is `level × 60 − 60`; `0` is silence. |
 | `muted`, `solo` | boolean | |
 | `sendA`, `sendB` | number | Send amount as linear gain, 0–1. |

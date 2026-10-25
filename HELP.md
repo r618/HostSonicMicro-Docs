@@ -63,8 +63,14 @@ The host sends MPE zone and pitch range configuration. If the instrument needs m
 
 ## Audio File
 
-- to add an existing audio file in supported format as audio sounce/Instrument: tap the waveform icon -> **Audio File** -> **Choose Audio File…**; any format the OS can decode is accepted (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
+- to add an existing audio file in supported format as audio source/Instrument: tap the waveform icon -> **Audio File** -> **Choose Audio File…**; any format the OS can decode is accepted (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
 - the file is copied to app's **Documents/Audio Files** and decoded to memory; limit is 256 MB decoded (~12 min stereo at 44.1 kHz). Files with a different rate are resampled to the session rate, mono plays on both channels, more than two channels use the first two
+- **MIDI files** (Standard MIDI File `.mid`/`.midi`/`.kar`) are picked the same way and play through a General MIDI sound bank - all 16 channels, program changes, tempo changes and drums on channel 10:
+  - macOS: uses the GS/General MIDI bank built into the system; iOS/iPadOS: not available yet (needs a bank shipped with the app), choosing a MIDI file shows an error
+  - the file is rendered to stereo audio once (44.1 kHz) when chosen or when a session loads it, then behaves like any audio file: waveform, playhead, Start, Loop and transport
+  - the render is normalized to -1 dBFS peak (at most +24 dB), so use the track fader for relative levels between MIDI files
+  - the audio runs to the end of the music plus up to 3 s of release tail (cut once silent); with Loop on the tail is part of the loop
+  - limit is ~12 min, same as audio files; file info shows MIDI tracks, sound bank and render rate instead of sample rate/channels
 - playback follows host transport (internal, MIDI Sync and Link): Play from stop starts at the playhead position, Pause/Resume continues from where it paused
 - tap the loaded file to open its waveform dialog:
   - drag the waveform to set the playhead; it is also the start position for the next Play from stop
