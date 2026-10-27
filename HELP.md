@@ -1,107 +1,109 @@
 
 ## Overview
 
-- There are four lanes/tracks, each can have up to two MIDI processors/generators, one mutually exclusive Instrument, Audio Input, Link Audio or Audio File source, and up to three audio effects
+- There are four tracks each with up to two MIDI processors/generators, one source (instrument, device input, Link Audio or audio file) and up to three audio effects.
 
-- Audio Input uses the system default audio input. It is processed by that track's Audio FX and is included in final recording and History Machine audio.
+- Device input uses the system default input. It runs through the track's FX and is included in recordings and History Machine.
 
-- Three main sections below: **Rack** where lanes are hosted, **Mixer**, and **Pads** for testing the sound on single track (either with or bypassing currently loaded MIDi processor, track destination is set in MIDI Input, defaults to track #1)
+- Three pages: **Rack** hosts the selected track's slots, **Mixer** has the faders, **Pads** plays the destination track (through its MIDI processors or bypassing them). The destination is set in **MIDI input** and defaults to track 1.
 
-- Sends A/B and Master inserts are below mixer on **Mixer** pane - UI is the same, but they are specific for currently selected track only
+- Sends A/B and the master inserts are under **Sends A/B & master** on the **Mixer** page. The send and master slots are shared; the send levels belong to the selected track.
 
-- all slots can host compatible AUv3, AUv2 plugins according to their type (MIDI processor, instrument, effect)
+- Each slot hosts a compatible AUv3 or AUv2 plug-in of its type (MIDI processor, instrument, effect).
 
-- **Assign** button below panes allows assigning any currently slotted plugin's parameter to one of the four macros/sliders
+- **Assign** below the pages maps any loaded plug-in parameter to one of the four macro sliders.
 
-- top left is current session name, tapping it allows renaming, saving, removing and restoring previously saved session; session save includes everything currently setup in the host - all plugins, their settings/loaded patches, and macros assignments,...
+- Tap the session name (top left) to rename, save, load or delete sessions. A saved session includes all plug-ins, their state and presets, and macro assignments.
 
-- Current session is also saved automatically and at regular intervals and automatically restored on relaunch.
+- The current session is saved automatically at regular ~30 seconds intervals and restored on relaunch.
 
-- **Saved sessions are open files**: each is a folder in **Documents/Sessions** (next to Audio Files) with a readable `Session.json` and one standard `.aupreset` file per plug-in state, so your work can stay usable without the app. The folder name is the session name - rename, copy or back up folders in Files/Finder. Format specification: [SESSION_FORMAT.md](https://github.com/r618/HostSonicMicro-Docs/blob/master/SESSION_FORMAT.md)
+- **Saved sessions have open format**: each is a folder in **Documents/Sessions** (next to Audio Files) with a readable `Session.json` and one standard `.aupreset` per plug-in, so your work can stay usable even without the app. The folder name is the session name; rename, copy or back up folders in Files/Finder. Format: [SESSION_FORMAT.md](https://github.com/r618/HostSonicMicro-Docs/blob/master/SESSION_FORMAT.md)
 
-- an RMS based green diode indicator's intensity at bottom left measures approximately final audio before its output/recorded
+- The small light at the bottom left shows approximate RMS of the final output, before it is played or recorded.
 
 ## Transport
 
-**Play / Pause / Resume** starts or pauses playback. Pause keeps the current position. The **Reset to Start** button beside it stops playback and returns the transport to the beginning. Press **Play** to restart loaded MIDI event files from their first event. Reset keeps the audio engine, loaded plug-ins, and settings in place. Audio File sources keep their configured Start position.
+**Play / Pause / Resume** starts or pauses playback; Pause keeps the position. **Return to start** beside it stops playback and rewinds - next **Play** restarts MIDI files from their first event. Return to start keeps the audio engine, plug-ins and settings; audio files keep their Start position.
 
-With external MIDI sync, reset the transport on the sending device. The local Reset button is disabled while that device controls the position.
+With external MIDI sync, rewind on the sending device (local button is also disabled while under external sync..).
 
 ## Audio settings
 
-- app runs at current default output rate, change in cogwheel menu, **Settings**
+- The app runs at the current output device rate. Override it in the gear menu → **Settings**.
 
-Internal processsing requests 256 frames for audio I/O buffer and (recorded) audio is in stereo.
+The host requests a 256-frame I/O buffer. Processing and recording are stereo.
 
-## MIDI In
+## MIDI input
 
-- **MIDI input** selects one CoreMIDI source or **All sources** for the app. Available sources include Network RTP sessions and IAC on macOS.
-- Select one **Destination** track, pads use this same destination. MIDI In is visible as **HostSonic MIDI** in system/other apps.
-- The track's two MIDI processors run in order, final output goes to the Instrument and every MIDI-capable Audio FX (`aumf`) with its **MIDI** checkbox enabled (off by default). All enabled destinations receive the same events in parallel.
-- Audio Input and Link Audio tracks can also use MIDI processors and send MIDI to enabled FX, without an instrument. For example, select Microphone as the audio source, load MIDI capable FX in FX slot, enable it's MIDI checkbox and load MIDI processor.
-- Pads use the same destination and keep their Through MIDI / Direct choice. Direct bypasses the MIDI processors for pads only and sends to the instrument and enabled FX.
+- **External source** selects one CoreMIDI source, or **All sources**. Sources include network RTP sessions and, on macOS, IAC buses.
+- Select one **Destination** track; pads use the same destination. Other apps see the host as **HostSonic MIDI**.
+- The track's two MIDI processors run in order. Their output goes to the instrument and to every MIDI-capable Audio FX (`aumf`) with its **MIDI** checkbox on (off by default). All enabled destinations receive the same events.
+- Device input and Link Audio tracks can also use MIDI processors and MIDI-enabled FX, without an instrument. Example: select device input as the source, load a MIDI-capable FX, enable its **MIDI** checkbox, then load a MIDI processor.
+- Pads keep their **Through MIDI** / **Direct** choice. Direct skips the MIDI processors for pads only and sends to the instrument and MIDI-enabled FX.
 
 ## MIDI files in processor slots
 
-Use the notes icon at the right of either MIDI processor slot and select **Choose MIDI File…**. The file replaces that slot's plug-in. It sends MIDI notes and channel messages to the next processor, then to the instrument and MIDI-enabled Audio FX. MIDI from an earlier processor or MIDI In passes through the file slot.
+Tap the notes icon on either MIDI processor slot and choose **Choose MIDI File…**. The file takes the place of that slot's plug-in. It sends notes and channel messages to the next processor, to the instrument and MIDI-enabled FX. MIDI from an earlier processor or MIDI input passes through.
 
-Playback follows the host transport and tempo; the file's tempo map is ignored. **Loop** is on by default. Use the file's ellipsis menu to turn Loop off, finish the current pass, bypass playback, choose another file, or remove it. The file selection and Loop setting are saved with the session. Files use the same **Documents/Audio Files** library as Audio Input files. This MIDI playback does not need a sound bank; load an instrument to hear the notes.
+Playback follows the host transport and tempo; the file's tempo map is ignored. **Loop** is on by default. The file's ellipsis menu turns Loop off (the current pass finishes), bypasses playback, picks another file or removes it. The file and its Loop setting are saved with the session. Files share the **Documents/Audio Files** library with audio files. No sound bank is used here; load an instrument to hear the notes.
+
+See below for MIDI audio playback.
 
 ## MPE pads
 
-Enable **MPE expression** on the Pads page for an MPE instrument. Off by default, saved with the session. Ordinary pads keep their original behavior.
+Turn on **MPE** on the Pads page to play an MPE instrument. Off by default, saved with the session. With MPE off, pads behave as normal single notes..
 
-- Each held pad uses a separate member channel in the lower MPE zone: manager channel 1, member channels 2–7. One finger per pad is supported, pads can be played simultaneously.
-- Pitch bend is left to right **Pitch bend width**, beside the MPE toggle, selects 2, 12, 24, or 48 semitones per pad width (default: 12).
-- Slide up / down sends tCC74 (timbre). CC74 starts at 64 at touch-down.
-- Touch force sends channel pressure only for force-capable direct touch or Apple Pencil.
-- Lift sends note-off and frees the channel.
+- Each held pad uses its own member channel in the lower MPE zone: manager channel 1, member channels 2–7. One finger per pad; several pads can play at once.
+- Slide sideways for pitch bend. **Pitch bend width** (beside the MPE toggle) sets 2, 12, 24 or 48 semitones per pad width (default 12).
+- Slide up/down for CC74 (timbre), which starts at 64 on touch-down.
+- Touch force sends channel pressure, on force-capable displays or with Apple Pencil only.
+- Lifting sends note-off and frees the channel.
 
-The host sends MPE zone and pitch range configuration. If the instrument needs manual setup, select the lower zone, channels 2–7, and ±48 semitones for member pitch bend. MIDI processors on the pad route must preserve the member channels and expression messages; use **Direct** to bypass them. External MIDI notes use the same instrument, so avoid channel conflicts while playing pads.
+The host sends the MPE zone and pitch range configuration. If the instrument needs manual setup, use the lower zone, channels 2–7 and ±48 semitones member pitch bend. MIDI processors on the pad route must preserve member channels and expression; use **Direct** to bypass them. External MIDI uses the same instrument, so avoid channel conflicts while playing pads.
 
-## MIDI Sync In/Out
+## MIDI sync in/out
 
-- **Input clock** can be synced to clock selected in BPM/Tempo dialog:
-- MIDI In/Out and Ableton Link sync are mutually exclusive
-- choose from all discovered sync points; when *Auto* is selected, first Start 'wins' and will be kept/prioritized over any other sync which might arrive later
-- **Output clock** can be advertised as public, with any subsriber(s) or to a specific existing app/destination
+- Set **Sync input** and **Sync output** in the Tempo dialog.
+- MIDI sync and Ableton Link are mutually exclusive.
+- Sync input lists all discovered senders. With **Auto**, the first sender to start wins and keeps priority over later ones.
+- Sync output goes to a specific app or device, or is published as **HostSonic Clock** for any app to subscribe.
 
-## Ableton Link Sync and Audio
+## Ableton Link sync and audio
 
-- enable Link in BPM/Tempo dialog, when adding/opening Audio Input instrument on a track, or via Main Mixer's Sends -> Link Output
-- tempo is synced after Link is enabled
-- to receive audio select from Link available audio streams on Audio Input dialog once they're discovered
-- to send host's final mix enable 'Share Main Mix' on Mixer/Sends in **Link Audio Output**
+- Enable Link in the Tempo dialog, in the audio source picker, or under Mixer → **Sends A/B & master** → **Link Audio Output**.
+- Tempo syncs once Link is enabled.
+- To receive audio, pick a discovered Link Audio stream in the track's audio source picker.
+- To send the final mix, turn on **Share Main Mix** under **Link Audio Output**.
 
-## Audio File
+## Audio files
 
-- to add an existing audio file in supported format as audio source/Instrument: tap the waveform icon -> **Audio File** -> **Choose Audio File…**; any format the OS can decode is accepted (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
-- the file is copied to app's **Documents/Audio Files** and decoded to memory; limit is 256 MB decoded (~12 min stereo at 44.1 kHz). Files with a different rate are resampled to the session rate, mono plays on both channels, more than two channels use the first two
-- **MIDI files** (Standard MIDI File `.mid`/`.midi`/`.kar`) are picked the same way and play through a General MIDI sound bank - all 16 channels, program changes, tempo changes and drums on channel 10:
-  - the sound bank is GeneralUser GS by S. Christian Collins (shipped with the app, same sound on iOS/iPadOS and macOS; free to use for your own music, private or commercial)
-  - the file is rendered to stereo audio once (44.1 kHz) when chosen or when a session loads it, then behaves like any audio file: waveform, playhead, Start, Loop and transport
-  - the render is normalized to -1 dBFS peak (at most +24 dB), so use the track fader for relative levels between MIDI files
-  - the audio runs to the end of the music plus up to 3 s of release tail (cut once silent); with Loop on the tail is part of the loop
-  - limit is ~12 min, same as audio files; file info shows MIDI tracks, sound bank and render rate instead of sample rate/channels
-- playback follows host transport (internal, MIDI Sync and Link): Play from stop starts at the playhead position, Pause/Resume continues from where it paused
-- tap the loaded file to open its waveform dialog:
-  - drag the waveform to set the playhead; it is also the start position for the next Play from stop
-  - **Start** field takes exact time as `SS`, `MM:SS`, `H:MM:SS`, decimals allowed (`1:23.5`)
-  - file info: name, title/artist/album when present, format/container, sample rate, channels, bit depth (PCM) or estimated bit rate, duration and size
-- playhead/start position and Loop are saved in the session; the session stores the file name only
-- **Files location:** iOS: Files app -> On My iPhone/iPad -> HostSonic μ -> Audio Files; macOS: `~/Library/Containers/<app>/Data/Documents/Audio Files`. Picking the same file again reuses its copy, a file picked from this folder is used in place, a different file with an existing name gets a numbered name. Copies are not removed by the app - delete them in Files/Finder; a session whose file was deleted shows it as missing, other tracks keep playing
+- To use an audio file as a track source: tap the waveform icon → **Audio File** → **Choose Audio File…**. Any format the system can decode works (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC).
+- The file is copied to **Documents/Audio Files** and decoded to memory, up to 256 MB decoded (about 12 min stereo at 44.1 kHz). Other rates are resampled to the session rate; mono plays on both channels; only the first two of more channels are used.
+- **MIDI files** (Standard MIDI File `.mid`/`.midi`/`.kar`) are picked the same way and play through a General MIDI sound bank: all 16 channels, program and tempo changes, drums on channel 10.
+  - The sound bank is GeneralUser GS by S. Christian Collins. It ships with the app, sounds the same on all platforms, and is free to use, private or commercial.
+  - The file is rendered to stereo once (44.1 kHz) when chosen or when a session loads it, then behaves like any audio file: waveform, playhead, Start, Loop and transport.
+  - The render is normalized to −1 dBFS peak (at most +24 dB); use the track faders to balance MIDI files.
+  - The audio runs to the end of the music plus up to 3 s of release tail (cut once silent). With Loop on, the tail is part of the loop.
+  - Same ~12 min limit as audio files. File info shows MIDI tracks, sound bank and render rate instead of sample rate and channels.
+- Playback follows the host transport (internal, MIDI sync or Link): Play from stop starts at the playhead; Pause/Resume continues from the pause point.
+- Tap the loaded file to open its waveform:
+  - Drag the waveform to set the playhead, which is also where the next Play from stop begins.
+  - The **Start** field takes `SS`, `MM:SS` or `H:MM:SS`, with decimals (`1:23.5`).
+  - File info: name, title/artist/album when present, format/container, sample rate, channels, bit depth (PCM) or estimated bit rate, duration and size.
+- Playhead/start position and Loop are saved with the session; the session stores only the file name.
+- **File location:** iOS: Files → On My iPhone/iPad → HostSonic μ → Audio Files. macOS: `~/Library/Containers/<app>/Data/Documents/Audio Files`. Picking the same file again reuses its copy; a file picked from this folder is used in place; a different file with an existing name gets a numbered name. The app never deletes copies; remove them in Files/Finder. A session whose file was deleted shows it as missing; other tracks keep playing.
 
 
 ## Recording
 
-- Final output can be recorded immediately by tapping **Record** button at the bottom right, tap/press again to finish and save
+- **Record** (bottom right) records the final output immediately. Press again to stop and save.
 
-- **History Machine** runs continuosly and stores the last few seconds of the final output. You can set the amount in **Settings**. Tapping it keeps the history and appends currently playing output, press either **History Machine** or **Record** again to finish and save
+- **History Machine** continuously keeps the last few seconds of the final output; set the length in **Settings**. Pressing it saves that history and keeps recording. Press **History Machine** or **Record** again to stop and save.
 
-- save location for the final file is selected using the standard Files/Finder picker, file name contains the session name and capture date/time by default
+- Choose the save location in the standard Files/Finder dialog. The default file name is the session name plus date and time.
 
-- file format is set in **Settings** -> **Recording**: AAC (256 kbps .m4a), FLAC (default, lossless 24-bit) or WAV (24-bit). AAC is saved at 44.1 or 48 kHz when the processing rate is higher
+- Set the format in **Settings** → **Recording**: AAC (256 kbps .m4a), FLAC (default, lossless 24-bit) or WAV (24-bit). AAC is saved at 44.1 or 48 kHz when the processing rate is higher.
 
-- device suspension or a stopped audio engine cannot supply audio, changing the sample rate (like switching outputs..) also clears the history
+- Nothing is captured while the device is suspended or the audio engine is stopped. Changing the sample rate (for example, by switching outputs) clears the history.
 
-- if output rate changes during recording (like switching outputs..), or any error is encountered, save dialog is presented and audio up to that point can be saved
+- If the output rate changes during recording (for example, by switching outputs) or an error occurs, the save dialog opens so you can keep the audio up to that point.

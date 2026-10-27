@@ -1,7 +1,8 @@
-## 1.0.9
-- + Reset to Start beside Play/Pause/Resume (external MIDI sync keeps sender control).
-- + MIDI files in MIDI processor slot: right-side notes menu, host tempo and transport, Loop on by default. File notes continue through the downstream MIDI graph, incoming MIDI passes through the file slot.
-- + MIDI files in Audio File track source: Standard MIDI Files play through the bundled GeneralUser GS bank on iOS and macOS (all 16 channels, program changes, drums on channel 10), rendered once to audio, then waveform/playhead/Loop work as for audio files
+## 1.1.0
+- + Reset to Start button beside Play/Pause/Resume
+- + support for MIDI files:
+- in MIDI processor slot: right-side notes menu, host tempo and transport, Loop on by default. File notes continue through the downstream MIDI graph, incoming MIDI passes through the file slot.
+- in Audio File track source: Standard MIDI Files play through the bundled GeneralUser GS bank on iOS and macOS (all 16 channels, program changes, drums on channel 10), rendered once to audio, then waveform/playhead/Loop work as for audio files
 - hardened final output physical protection & Panic recovery
 
 ## TestFlight Beta 1.0.8
