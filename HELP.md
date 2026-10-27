@@ -43,9 +43,9 @@ Internal processsing requests 256 frames for audio I/O buffer and (recorded) aud
 
 ## MIDI files in processor slots
 
-Use the chevron at the right of either MIDI processor slot and select **Choose MIDI File…**. The file replaces that slot's plug-in. It sends MIDI notes and channel messages to the next processor, then to the instrument and MIDI-enabled Audio FX. MIDI from an earlier processor or MIDI In passes through the file slot.
+Use the notes icon at the right of either MIDI processor slot and select **Choose MIDI File…**. The file replaces that slot's plug-in. It sends MIDI notes and channel messages to the next processor, then to the instrument and MIDI-enabled Audio FX. MIDI from an earlier processor or MIDI In passes through the file slot.
 
-Playback follows the host transport and tempo; the file's tempo map is ignored. **Loop** is on by default. Use the file's chevron menu to turn Loop off, finish the current pass, bypass playback, choose another file, or remove it. The file selection and Loop setting are saved with the session. Files use the same **Documents/Audio Files** library as Audio Input files. This MIDI playback does not need a sound bank; load an instrument to hear the notes.
+Playback follows the host transport and tempo; the file's tempo map is ignored. **Loop** is on by default. Use the file's ellipsis menu to turn Loop off, finish the current pass, bypass playback, choose another file, or remove it. The file selection and Loop setting are saved with the session. Files use the same **Documents/Audio Files** library as Audio Input files. This MIDI playback does not need a sound bank; load an instrument to hear the notes.
 
 ## MPE pads
 

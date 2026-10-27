@@ -1,6 +1,6 @@
 ## 1.0.9
 - + Reset to Start beside Play/Pause/Resume (external MIDI sync keeps sender control).
-- + MIDI files in MIDI processor slot: right-side chevron menu, host tempo and transport, Loop on by default. File notes continue through the downstream MIDI graph, incoming MIDI passes through the file slot.
+- + MIDI files in MIDI processor slot: right-side notes menu, host tempo and transport, Loop on by default. File notes continue through the downstream MIDI graph, incoming MIDI passes through the file slot.
 - + MIDI files in Audio File track source (macOS): Standard MIDI Files play through the system General MIDI bank, rendered once to audio, then waveform/playhead/Loop work as for audio files. iOS needs a shipped bank - not yet
 - hardened final output physical protection & Panic recovery
 
