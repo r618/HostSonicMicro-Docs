@@ -21,6 +21,12 @@
 
 - an RMS based green diode indicator's intensity at bottom left measures approximately final audio before its output/recorded
 
+## Transport
+
+**Play / Pause / Resume** starts or pauses playback. Pause keeps the current position. The **Reset to Start** button beside it stops playback and returns the transport to the beginning. Press **Play** to restart loaded MIDI event files from their first event. Reset keeps the audio engine, loaded plug-ins, and settings in place. Audio File sources keep their configured Start position.
+
+With external MIDI sync, reset the transport on the sending device. The local Reset button is disabled while that device controls the position.
+
 ## Audio settings
 
 - app runs at current default output rate, change in cogwheel menu, **Settings**
