@@ -35,6 +35,12 @@ Internal processsing requests 256 frames for audio I/O buffer and (recorded) aud
 - Audio Input and Link Audio tracks can also use MIDI processors and send MIDI to enabled FX, without an instrument. For example, select Microphone as the audio source, load MIDI capable FX in FX slot, enable it's MIDI checkbox and load MIDI processor.
 - Pads use the same destination and keep their Through MIDI / Direct choice. Direct bypasses the MIDI processors for pads only and sends to the instrument and enabled FX.
 
+## MIDI files in processor slots
+
+Use the chevron at the right of either MIDI processor slot and select **Choose MIDI File…**. The file replaces that slot's plug-in. It sends MIDI notes and channel messages to the next processor, then to the instrument and MIDI-enabled Audio FX. MIDI from an earlier processor or MIDI In passes through the file slot.
+
+Playback follows the host transport and tempo; the file's tempo map is ignored. **Loop** is on by default. Use the file's chevron menu to turn Loop off, finish the current pass, bypass playback, choose another file, or remove it. The file selection and Loop setting are saved with the session. Files use the same **Documents/Audio Files** library as Audio Input files. This MIDI playback does not need a sound bank; load an instrument to hear the notes.
+
 ## MPE pads
 
 Enable **MPE expression** on the Pads page for an MPE instrument. Off by default, saved with the session. Ordinary pads keep their original behavior.

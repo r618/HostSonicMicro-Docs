@@ -111,7 +111,8 @@ The rack layout is fixed. The app rejects a file with a different number of trac
 | `kind` | string | `midi`, `instrument` or `audio`. Fixed by position; written for readers. |
 | `bypassed` | boolean | |
 | `receivesMIDI` | boolean | Optional. An audio effect that also receives the track's MIDI. |
-| `plugin` | object | Absent for an empty slot. |
+| `plugin` | object | Absent for an empty slot or a MIDI file slot. |
+| `midiFile` | object | Optional, for either MIDI slot instead of `plugin`: `fileName` (name in **Audio Files**) and `loops` (boolean, defaults to `true`). Events follow the host tempo and transport and enter the next MIDI processor or instrument/MIDI-enabled FX. Incoming MIDI passes through. |
 
 Slots are addressed by **slot paths**: `track1.slot1` … `track4.slot6`, `sendA`, `sendB`, `master1`, `master2`. Positions are 1-based.
 

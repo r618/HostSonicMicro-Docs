@@ -1,8 +1,8 @@
-## Unreleased
-- + MIDI files in Audio File track source (macOS): Standard MIDI Files play through the system General MIDI bank, rendered once to audio, then waveform/playhead/Loop work as for audio files. iOS needs a shipped bank - not yet
-
 ## 1.0.9
+- + MIDI files in MIDI processor slot: right-side chevron menu, host tempo and transport, Loop on by default. File notes continue through the downstream MIDI graph, incoming MIDI passes through the file slot.
+- + MIDI files in Audio File track source (macOS): Standard MIDI Files play through the system General MIDI bank, rendered once to audio, then waveform/playhead/Loop work as for audio files. iOS needs a shipped bank - not yet
 - hardened final output physical protection & Panic recovery
+
 ## TestFlight Beta 1.0.8
 - + open text session format: saved sessions are folders in Documents/Sessions (Files app/Finder) with a readable Session.json and standard .aupreset files for plug-in states; see SESSION_FORMAT.md. Sessions saved by earlier betas are not loaded
 - + Audio File track source: waveform (Audio Input) menu -> Audio File, standard Files/Finder picker; any format the OS decodes (WAV, AIFF, CAF, MP3, AAC/M4A, ALAC, FLAC)
