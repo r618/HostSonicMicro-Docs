@@ -1,7 +1,8 @@
 ## 1.1.1
 - UI facelift
-- MIDI: - improved (replaced) offline render for MIDI audio playback
-also overcomes previous voices limit
+- MIDI: - improved (replaced) offline audio render for MIDI audio playback
+- overcomes previous voices limit
+- MIDI audio playback now follows e.g. host's tempo
 
 ## 1.1.0
 - + Reset to Start button beside Play/Pause/Resume
