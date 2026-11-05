@@ -1,3 +1,7 @@
+## 1.1.1
+- UI facelift
+- improve MIDI offline audio player renderer - workaround voice limit by more rendering passes
+
 ## 1.1.0
 - + Reset to Start button beside Play/Pause/Resume
 - + support for MIDI files:
