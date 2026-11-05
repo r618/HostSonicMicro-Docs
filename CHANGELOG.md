@@ -1,8 +1,7 @@
 ## 1.1.1
 - UI facelift
-- improve MIDI offline audio player renderer
-	- workaround voice limit by more than one rendering passes if needed
-	- save and restore offline render with session
+- MIDI: - improved (replaced) offline render for MIDI audio playback
+also overcomes previous voices limit
 
 ## 1.1.0
 - + Reset to Start button beside Play/Pause/Resume
